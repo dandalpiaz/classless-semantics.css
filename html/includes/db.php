@@ -1,4 +1,3 @@
-
 <?php
 $dbPath = __DIR__ . '/../../db/sqlite.db';
 

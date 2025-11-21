@@ -40,17 +40,24 @@
     <form action="">
         <fieldset>
             <legend>Contact Us</legend>
-            <label for="email">Email Address</label>
-            <input type="text" id="email" placeholder="jane.doe@gmail.com" required>
-            <label for="subject">Subject</label>
-            <select id="subject" required>
+
+            <label for="email">Email Address*</label>
+            <input type="text" id="email" placeholder="jane.doe@gmail.com" aria-describedby="helper1" required>
+            <p id="helper1" class="helper-text">(*required)</p>
+
+            <label for="subject">Subject*</label>
+            <select id="subject" aria-describedby="helper2" required>
                 <option value="" disabled selected>Select a subject</option>
                 <option value="general">General Inquiry</option>
                 <option value="support">Support</option>
                 <option value="feedback">Feedback</option>
             </select>
-            <label for="message">Your Message</label>
-            <textarea id="message" placeholder="Type your message here..." required></textarea>
+            <p id="helper2" class="helper-text">(*required)</p>
+
+            <label for="message">Your Message*</label>
+            <textarea id="message" placeholder="Type your message here..." minlength="1" maxlength="2000" aria-describedby="helper3" required></textarea>
+            <p id="helper3" class="helper-text">(*required, 2000 charaters maximumu)</p>
+
             <button type="submit">Send</button>
         </fieldset>
     </form>

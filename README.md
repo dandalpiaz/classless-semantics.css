@@ -1,2 +1,2 @@
 
-# Functional Web App Template
+# classless-semantic.css

@@ -1,9 +1,0 @@
-
-services:
-  web:
-    image: php:8.2-apache
-    container_name: php-apache-app
-    ports:
-      - "8000:80"
-    volumes:
-      - ./:/var/www

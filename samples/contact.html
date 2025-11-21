@@ -30,6 +30,9 @@
 </header>
 
 <main class="centered-page">
+
+    <div role="alert" class="yellow-alert">This page is a sample, forms do not function.</div>
+
     <h1>Contact Us</h1>
 
     <p>Use the form below to send us a message!</p>
@@ -39,6 +42,13 @@
             <legend>Contact Us</legend>
             <label for="email">Email Address</label>
             <input type="text" id="email" placeholder="jane.doe@gmail.com" required>
+            <label for="subject">Subject</label>
+            <select id="subject" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="support">Support</option>
+                <option value="feedback">Feedback</option>
+            </select>
             <label for="message">Your Message</label>
             <textarea id="message" placeholder="Type your message here..." required></textarea>
             <button type="submit">Send</button>

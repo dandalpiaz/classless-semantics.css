@@ -10,6 +10,8 @@
 </head>
 <body>
 
+<a href="#main" id="skip-to-main">Skip to main content</a>
+
 <header>
     <a href="../index.html">👋 classless-semantic.css</a>
     <nav aria-label="Main Navigation">
@@ -30,6 +32,9 @@
 </header>
 
 <main class="centered-page">
+
+    <div role="alert" class="yellow-alert">This page is a sample, forms do not function.</div>
+
     <h1>Log In</h1>
 
     <p>Use the form below to login in with your email address.</p>
@@ -37,9 +42,16 @@
     <form action="">
         <fieldset>
             <legend>Log In</legend>
-            <label for="email">Email Address</label>
-            <input type="text" id="email" placeholder="jane.doe@gmail.com" required>
-            <button type="submit">Send Log In Code</button>
+
+            <label for="email">Email Address*</label>
+            <input type="text" id="email" placeholder="jane.doe@gmail.com" aria-describedby="helper1" required>
+            <p id="helper1" class="helper-text">(*required)</p>
+
+            <label for="password">Password*</label>
+            <input type="password" id="password" placeholder="Enter your password" aria-describedby="helper2" required>
+            <p id="helper2" class="helper-text">(*required)</p>
+
+            <button type="submit">Log In</button>
         </fieldset>
     </form>
 

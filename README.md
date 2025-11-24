@@ -11,15 +11,14 @@
 - Code blocks
 - Validation messages, alerts
 - Grids
-- Select options
 - Checkbox
 - Radio buttons
 - Switch
 - Range slider
 - Disabled inputs
 - Time, date, and color pickers
-- Modal
 - Article, section
 - Search
 - Progress bar and loading
 - Inline text elements
+- Inputs nested in labels?

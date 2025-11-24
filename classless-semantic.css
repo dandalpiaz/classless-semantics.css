@@ -27,7 +27,6 @@ main {
     clear: both;
     margin-top: 50px;
     display: block;
-    /*padding-top: 1px;*/
 }
 
 main ol li, main ul li {
@@ -72,7 +71,6 @@ button {
     background: rgb(30,130,130);
     color: #fff;
     display: block;
-    margin-bottom: 15px;
 }
 
 button:hover {
@@ -84,11 +82,24 @@ button:disabled {
     cursor: not-allowed;
 }
 
+button ~ button {
+    margin-bottom: 15px;
+}
+
 code {
     background: #222;
     color: #ddd;
     font-size: 17px;
     padding: 1px;
+}
+
+pre {
+    background: #222;
+    color: #ddd;
+    padding: 15px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 summary {
@@ -294,7 +305,6 @@ input[type="file"]::file-selector-button:hover {
     background: rgb(10,110,110);
 }
 
-/* checkbox */
 input[type="checkbox"] {
     width: auto;
     margin-bottom: 25px;
@@ -303,6 +313,46 @@ input[type="checkbox"] {
     bottom: 8px;
     accent-color: rgb(30,130,130);
 }
+
+/* disabled inputs */
+input:disabled, select:disabled, textarea:disabled {
+    background: #222;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* range slider */
+input[type="range"] {
+    width: 100%;
+    accent-color: rgb(30,130,130);
+}
+
+/* color picker */
+input[type="color"] {
+    padding: 3px;
+    height: 40px;
+}
+
+/* date picker icon color */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+/* time picker icon color */
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+/* radio buttons */
+input[type="radio"] {
+    width: auto;
+    margin-bottom: 25px;
+    transform: scale(1.5);
+    position: relative;
+    bottom: 4px;
+    accent-color: rgb(30,130,130);
+}
+
 
 /**************/
 /*** Tables ***/

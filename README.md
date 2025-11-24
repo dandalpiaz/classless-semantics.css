@@ -1,10 +1,9 @@
 
-# classless-semantic.css
+# classless-semantics.css
 
 ## Todo
 
-- Sample pages - products, search, cart, payment
-- Get a list of all semantic HTML elements
+- Make list of semantic HTML elements
 - Light mode
 - Hover states
 - Images/figures
@@ -22,3 +21,4 @@
 - Progress bar and loading
 - Inline text elements
 - Inputs nested in labels?
+- Sample pages - products, search, etc.

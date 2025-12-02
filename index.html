@@ -39,7 +39,7 @@
 
 <main id="main">
 
-    <div role="alert" class="red-alert">Under development</div>
+    <div role="alert" class="red-alert"><a href="https://github.com/dandalpiaz/classless-semantics.css/releases">v1.0.0-alpha</a> coming soon</div>
 
     <h1>Hi!</h1>
 
@@ -112,11 +112,9 @@
     <h3>Modal</h3>
     
     <dialog id="sample-modal">
-        <form method="dialog">
-            <h2>Sample Modal Dialog</h2>
-            <p>This is an example of a modal dialog using the <code>&lt;dialog&gt;</code> element.</p>
-            <button type="submit">Close</button>
-        </form>
+        <h2>Sample Modal Dialog</h2>
+        <p>This is an example of a modal dialog using the <code>&lt;dialog&gt;</code> element.</p>
+        <button onclick="document.getElementById('sample-modal').close();">Close</button>
     </dialog>
 
     <button onclick="document.getElementById('sample-modal').showModal();">Open Modal</button>

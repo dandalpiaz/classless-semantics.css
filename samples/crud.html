@@ -43,7 +43,62 @@
 
     <h1>CRUD</h1>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <details>
+        <summary>About this template</summary>
+        <p>TBD</p>
+    </details>
+
+    <h2>Staff List</h2>
+
+    <dialog id="sample-modal">
+
+        <h2>Sample Modal Dialog</h2>
+
+        <form>
+            <fieldset>
+                <legend>Add New Staff Member</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required />
+
+                <button type="submit">Add Staff Member</button>
+                <button onclick="document.getElementById('sample-modal').close();">Cancel</button>
+            </fieldset>
+        </form>
+    </dialog>
+
+    <button onclick="document.getElementById('sample-modal').showModal();">Open Modal</button>
+
+    <div class="responsive-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jane Doe</td>
+                    <td>janedoe@gmail.com</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>John Smith</td>
+                    <td>johnsmith@gmail.com</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+            </tbody>
+        </table>
+    </div>
 
 </main>
 

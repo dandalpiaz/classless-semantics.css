@@ -23,7 +23,7 @@ body {
 }
 
 body > main, body > header, body > footer {
-    max-width: 1000px;
+    /*max-width: 1000px;*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -32,6 +32,7 @@ main {
     clear: both;
     margin-top: 50px;
     display: block;
+    overflow: auto;
 }
 
 main ol li, main ul li {
@@ -40,6 +41,20 @@ main ol li, main ul li {
 
 main ul, main ol {
     padding-left: 30px;
+}
+
+aside {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    float: left;
+    width: 250px;
+    margin-right: 25px;
+    clear: both;
+    height: calc(100vh - 100px);
+}
+
+aside ~ main {
+    clear: none;
 }
 
 ul ul, ol ol, ul ol, ol ul {
@@ -236,6 +251,7 @@ header > details {
     top: 15px;
     border: 1px solid #333;
     max-width: 70%;
+    z-index: 100;
 }
 
 header > details > nav ul li {
@@ -271,11 +287,23 @@ header > details > summary {
     header > details {
         display: block;
     }
+
+    aside, main {
+        width: 100%;
+    }
+
+    aside {
+        height: auto;
+    }
 }
 
 /*************/
 /*** Forms ***/
 /*************/
+
+form {
+    overflow: hidden;
+}
 
 fieldset {
     border: 1px solid #333;
@@ -360,14 +388,6 @@ input[type="range"] {
 input[type="color"] {
     padding: 3px;
     height: 40px;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-}
-
-input[type="time"]::-webkit-calendar-picker-indicator {
-    filter: invert(1);
 }
 
 input[type="radio"] {
@@ -482,9 +502,15 @@ main.centered-page p {
     left: 0;
 }
 
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 [role="alert"] {
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 12px;
     margin-bottom: 20px;
     padding: 10px;
     text-align: center;

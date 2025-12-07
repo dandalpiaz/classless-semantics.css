@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
     <link rel="stylesheet" type="text/css" href="../classless-semantics.css">
+    <script src="../classless-semantics.js" defer></script>
 </head>
 <body>
 
@@ -41,7 +42,7 @@
 
     <div role="alert" class="yellow-alert">Sample page, forms do not function</div>
 
-    <h1>CRUD</h1>
+    <h1>Modal-based Editing<!--<sup>(<a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a>)</sup>--></h1>
 
     <details>
         <summary>About this template</summary>
@@ -52,16 +53,22 @@
 
     <dialog id="sample-modal">
 
-        <h2>Sample Modal Dialog</h2>
+        <h2>Add Staff Member</h2>
 
         <form>
             <fieldset>
-                <legend>Add New Staff Member</legend>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
+                <legend>Add Staff Member</legend>
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" placeholder="Jane Doe" aria-describedby="helper1" required />
+                <p id="helper1" class="helper-text">(*required)</p>
 
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email" required />
+                <label for="email">Email Address*</label>
+                <input type="text" id="email" name="email" placeholder="janedoe@gmail.com" aria-describedby="helper2" required />
+                <p id="helper2" class="helper-text">(*required)</p>
+
+                <label for="phone">Phone Number*</label>
+                <input type="text" id="phone" name="phone" placeholder="555-123-4567" aria-describedby="helper3" required/>
+                <p id="helper3" class="helper-text">(*required)</p>
 
                 <button type="submit">Add Staff Member</button>
                 <button onclick="document.getElementById('sample-modal').close();">Cancel</button>
@@ -69,14 +76,15 @@
         </form>
     </dialog>
 
-    <button onclick="document.getElementById('sample-modal').showModal();">Open Modal</button>
+    <button onclick="document.getElementById('sample-modal').showModal();">Add Staff Member</button>
 
     <div class="responsive-table">
         <table>
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Email</th>
+                    <th>Email Address</th>
+                    <th>Phone Number</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -84,6 +92,7 @@
                 <tr>
                     <td>Jane Doe</td>
                     <td>janedoe@gmail.com</td>
+                    <td>555-123-4567</td>
                     <td>
                         <button>Edit</button>
                         <button>Delete</button>
@@ -92,6 +101,7 @@
                 <tr>
                     <td>John Smith</td>
                     <td>johnsmith@gmail.com</td>
+                    <td>555-987-6543</td>
                     <td>
                         <button>Edit</button>
                         <button>Delete</button>

@@ -19,6 +19,7 @@ body {
     font-size: 18px;
     line-height: 1.7;
     margin: 0px;
+    overflow-wrap: break-word;
 }
 
 body > main, body > header, body > footer {
@@ -162,12 +163,16 @@ img {
 dialog {
     border: none;
     border-radius: 8px;
-    padding: 30px;
+    padding: 15px;
     background: #111;
     color: #eee;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     position: fixed;
     z-index: 1000;
+}
+
+dialog > h1, dialog > h2, dialog > h3 {
+    margin-top: 0px;
 }
 
 dialog::backdrop {

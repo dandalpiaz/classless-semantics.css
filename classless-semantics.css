@@ -50,11 +50,29 @@ aside {
     width: 250px;
     margin-right: 25px;
     clear: both;
-    height: calc(100vh - 100px);
+    /*height: calc(100vh - 100px);*/
+}
+
+aside:has(details:not([open])) {
+    width: 100%; 
+}
+
+aside:has(details:not([open])) ~ main {
+    clear: both;
 }
 
 aside ~ main {
     clear: none;
+}
+
+aside ul, aside ol {
+    font-size: 16px;
+    padding-left: 25px;
+    font-weight: 500;
+}
+
+aside nav li a {
+    text-decoration: none;
 }
 
 ul ul, ol ol, ul ol, ol ul {
@@ -506,6 +524,12 @@ main.centered-page p {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+}
+
+aside.right-sidebar {
+    float: right;
+    margin-left: 25px;
+    margin-right: 0px;
 }
 
 [role="alert"] {

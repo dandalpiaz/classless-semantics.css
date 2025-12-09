@@ -41,3 +41,13 @@ document.addEventListener('keydown', (event) => {
     }
   }
 });
+
+// close details in aside on mobile, by default
+//window.addEventListener('load', () => {
+  if (window.innerWidth < 750) {
+    const asideDetails = document.querySelector('aside details');
+    if (asideDetails) {
+      asideDetails.removeAttribute('open');
+    }
+  }
+//});

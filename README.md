@@ -3,16 +3,15 @@
 
 ## Todo
 
-- Add .container class
 - Test sidebar on a sample page
 - Light mode
 - Hover states
 - Add syntax highlighting for code blocks
 - Validation messages
 - Add a 'Getting Started' section
-- Create a separate elements page with TOC
+- Create a separate elements page with TOC?
 - Inputs nested in labels?
-- Sample pages - new/blog, products/menu/search (grids), chat, CRUD, etc.
+- Sample pages - article/blog, products/menu/search (grids), chat, CRUD (modal, page, sidebar), posts/comments, etc.
 
 ### Remaining Elements (review)
 
@@ -26,7 +25,6 @@
 - sub
 - sup
 - time
-- hr
 - section
 - article
 - aside

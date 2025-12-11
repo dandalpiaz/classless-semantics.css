@@ -7,28 +7,17 @@
 - Light mode
 - Hover states
 - Add syntax highlighting for code blocks
-- Validation messages
+- Validation messages (where?)
 - Add a 'Getting Started' section
 - Create a separate elements page with TOC?
 - Inputs nested in labels?
-- Sample pages - article/blog, products/menu/search (grids), chat, CRUD (modal, page, sidebar), team, posts/comments, etc.
+- Search button next to input
+- Sample pages - article/blog, products/menu/search (grids), cart, chat, CRUD (modal, page, sidebar), team, posts/comments, media player, etc.
 
 ### Remaining Elements (review)
 
-- small
-- mark
-- abbr
-- cite
-- q
-- kbd
-- samp
-- sub
-- sup
-- time
 - section
 - article
-- aside
-- address
 - dl
 - dt
 - dd

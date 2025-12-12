@@ -9,9 +9,9 @@
 - Add syntax highlighting for code blocks
 - Validation messages (where?)
 - Add a 'Getting Started' section
-- Create a separate elements page with TOC?
 - Inputs nested in labels?
 - Search button next to input
+- Pagination styles
 - Sample pages - article/blog, products/menu/search (grids), cart, chat, CRUD (modal, page, sidebar), team, posts/comments, media player, etc.
 
 ### Remaining Elements (review)

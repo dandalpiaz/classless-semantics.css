@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>classless-semantics.css</title>
+    <title>vanilla-web-templates</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" type="text/css" href="classless-semantics.css">
     <script src="classless-semantics.js" defer></script>
 </head>
@@ -14,27 +14,21 @@
 <a href="#main" id="skip-to-main">Skip to main content</a>
 
 <header class="container">
-    <a href="./index.html">👋 classless-semantics.css</a>
+    <a href="./index.html"><img src="images/vanilla.png" style="width: 17px; vertical-align: top; margin-right: 9px;"/>vanilla-web-templates</a>
     <nav aria-label="Main Navigation">
         <ul>
-            <li><a href="./samples/article.html">Article</a>
-            <li><a href="./samples/posts.html">Posts</a></li>
-            <li><a href="./samples/grid.html">Grid</a></li>
-            <li><a href="./samples/crud.html">CRUD</a></li>
-            <li><a href="./samples/contact.html">Contact</a></li>
-            <li><a href="./samples/login.html">Log In</a></li>
+            <li><a href="">Get Started</a></li>
+            <li><a href="">Templates</a></li>
+            <li><a href="">GitHub</a></li>
         </ul>
     </nav>
     <details>
         <summary> Menu </summary>
         <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="./samples/article.html">Article</a>
-                <li><a href="./samples/posts.html">Posts</a></li>
-                <li><a href="./samples/grid.html">Grid</a></li>
-                <li><a href="./samples/crud.html">CRUD</a></li>
-                <li><a href="./samples/contact.html">Contact</a></li>
-                <li><a href="./samples/login.html">Log In</a></li>
+                <li><a href="">Get Started</a></li>
+                <li><a href="">Templates</a></li>
+                <li><a href="">GitHub</a></li>
             </ul>
         </nav>
     </details>
@@ -51,13 +45,87 @@
         <figcaption>An example image with caption</figcaption>
     </figure>
 
-    <p>The <code>classless-semantics.css</code> framework is a minimal CSS stylesheet that styles native HTML elements with an emphasis on <em>semantic structure</em> and <em>accessibility</em>. Find the project on <a href="https://github.com/dandalpiaz/classless-semantics.css">GitHub</a>.</p>
+    <p>These <code>vanilla-web-templates</code> aim to provide common functionality needed in websites/apps using 'vanilla' CSS and JavaScript with an emphasis on <em>native HTML elements</em>, <em>semantic structure</em>, and <em>accessibility</em>.</p>
 
     <ul>
         <li><strong>TBD 1</strong> – [[[placeholder]]]</li>
         <li><strong>TBD 2</strong> – [[[placeholder]]]</li>
         <li><strong>TBD 3</strong> – [[[placeholder]]]</li>
+        <li><strong>TBD 4</strong> – [[[placeholder]]]</li>
     </ul>
+
+    <h2>Templates</h2>
+
+    <form>
+        <label for="template-search">Filter Templates:</label>
+        <input type="search" name="template-search" id="template-search" placeholder="Enter keyword to filter the items below..." aria-describedby="helper1" />
+        <p id="helper1" class="helper-text">(results update as you type)</p>
+    </form>
+
+    <div class="grid" role="list">
+        <div role="listitem">
+            <a href="./samples/article.html">
+                <img src="https://picsum.photos/id/1/400/225" alt="Placeholder image 1" />
+                <small>Article / Blog Post</small>
+            </a>
+        </div>
+        <div role="listitem">
+            <a href="./samples/contact.html">
+                <img src="https://picsum.photos/id/2/400/225" alt="Placeholder image 2" />
+                <small>Contact Form</small>
+            </a>
+        </div>
+        <div role="listitem">
+            <a href="./samples/login.html">
+                <img src="https://picsum.photos/id/3/400/225" alt="Placeholder image 3" />
+                <small>Login Form</small>
+            </a>
+        </div>
+        <div role="listitem">
+            <a href="./samples/crud.html">
+                <img src="https://picsum.photos/id/4/400/225" alt="Placeholder image 4" />
+                <small>Modal-based Editing</small>
+            </a>
+        </div>
+        <div role="listitem">
+            <a href="./samples/grid.html">
+                <img src="https://picsum.photos/id/5/400/225" alt="Placeholder image 5" />
+                <small>Grid</small>
+            </a>
+        </div>
+        <div role="listitem">
+            <a href="./samples/posts.html">
+                <img src="https://picsum.photos/id/6/400/225" alt="Placeholder image 6" />
+                <small>News Aggregator</small>
+            </a>
+        </div>
+    </div>
+
+    <div id="template-count" aria-live="polite"></div>
+
+    <script>
+        // Filter templates based on input
+        const searchInput = document.getElementById('template-search');
+        const templateItems = document.querySelectorAll('.grid [role="listitem"]');
+        const maxCount = templateItems.length;
+        const templateCount = document.getElementById('template-count');
+        function filterTemplates() {
+            const query = searchInput.value.toLowerCase();
+            let visibleCount = 0;
+            templateItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    item.style.display = '';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            templateCount.innerHTML = `<p>Showing <strong>${visibleCount}</strong> of <strong>${maxCount}</strong> templates.</p>`;
+        }
+        searchInput.addEventListener('input', filterTemplates);
+        filterTemplates();
+    </script>
 
     <h2>Sample Elements</h2>
 

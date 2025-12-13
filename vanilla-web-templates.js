@@ -1,4 +1,20 @@
 
+// Close header > details when clicking outside of it
+document.addEventListener('click', (event) => {
+  const headerDetails = document.querySelector('header details');
+  if (headerDetails && !headerDetails.contains(event.target)) {
+    headerDetails.removeAttribute('open');
+  }
+});
+
+// Close details in aside on mobile, by default
+if (window.innerWidth < 750) {
+  const asideDetails = document.querySelector('aside details');
+  if (asideDetails) {
+    asideDetails.removeAttribute('open');
+  }
+}
+
 // Close dialog when clicking outside of it
 document.addEventListener('click', (event) => {
   if (event.target instanceof HTMLDialogElement) {
@@ -41,13 +57,3 @@ document.addEventListener('keydown', (event) => {
     }
   }
 });
-
-// close details in aside on mobile, by default
-//window.addEventListener('load', () => {
-  if (window.innerWidth < 750) {
-    const asideDetails = document.querySelector('aside details');
-    if (asideDetails) {
-      asideDetails.removeAttribute('open');
-    }
-  }
-//});

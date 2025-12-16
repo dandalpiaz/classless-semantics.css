@@ -4,7 +4,7 @@
 /*******************/
 
 :root {
-    color-scheme: light dark;
+    color-scheme: dark;
     --background-color: #000000;
     --text-color: #eeeeee;
     --link-color: rgb(150,250,250);
@@ -51,54 +51,52 @@
     --alert-green-text-color: #aaffaa;
 }
 
-/* light mode overrides */
-@media (prefers-color-scheme: light) {
-    :root {
-        --background-color: #ffffff;
-        --text-color: #111111;
-        --link-color: rgb(0,100,100);
-        --link-hover-color: rgb(0,80,80);
-        --button-bg-color: rgb(0,120,120);
-        --button-bg-hover-color:  rgb(0,100,100);
-        --button-text-color: #ffffff;
-        --button-disabled-bg-color: #cccccc;
-        --button-disabled-text-color: #666666;
-        --code-bg-color: #f4f4f4;
-        --code-text-color: #222222;
-        --details-bg-color: #f9f9f9;
-        --details-border-color: #cccccc;
-        --blockquote-border-color: #cccccc;
-        --blockquote-text-color: #555555;
-        --figure-border-color: #cccccc;
-        --figcaption-text-color: #555555;
-        --dialog-bg-color: #ffffff;
-        --dialog-text-color: #111111;
-        --dialog-box-shadow-color: rgba(0,0,0,0.2);
-        --dialog-backdrop-color: rgba(200, 200, 200, 0.7);
-        --hr-bg-color: #cccccc;
-        --site-title-color: #222222;
-        --fieldset-border-color: #cccccc;
-        --input-bg-color: #f8fafb;
-        --input-text-color: #111111;
-        --input-border-color: #999999;
-        --input-placeholder-color: #777777;
-        --input-helper-text-color: #555555;
-        --input-disabled-bg-color: #eeeeee;
-        --input-disabled-text-color: #999999;
-        --input-disabled-border-color: #cccccc;
-        --table-cell-border-color: #cccccc;
-        --table-header-bg-color: #f4f4f4;
-        --table-footer-bg-color: #f4f4f4;
-        --alert-red-border-color: #ff5555;
-        --alert-red-bg-color: #ffdddd;
-        --alert-red-text-color: #660000;
-        --alert-yellow-border-color: #ffdd55;
-        --alert-yellow-bg-color: #fffae6;
-        --alert-yellow-text-color: #665500;
-        --alert-green-border-color: #55ff55;
-        --alert-green-bg-color: #ddffdd;
-        --alert-green-text-color: #006600;
-    }
+[data-theme=light] {
+    color-scheme: light;
+    --background-color: #ffffff;
+    --text-color: #111111;
+    --link-color: rgb(0,100,100);
+    --link-hover-color: rgb(0,80,80);
+    --button-bg-color: rgb(0,120,120);
+    --button-bg-hover-color:  rgb(0,100,100);
+    --button-text-color: #ffffff;
+    --button-disabled-bg-color: #cccccc;
+    --button-disabled-text-color: #666666;
+    --code-bg-color: #f4f4f4;
+    --code-text-color: #222222;
+    --details-bg-color: #f9f9f9;
+    --details-border-color: #cccccc;
+    --blockquote-border-color: #cccccc;
+    --blockquote-text-color: #555555;
+    --figure-border-color: #cccccc;
+    --figcaption-text-color: #555555;
+    --dialog-bg-color: #ffffff;
+    --dialog-text-color: #111111;
+    --dialog-box-shadow-color: rgba(0,0,0,0.2);
+    --dialog-backdrop-color: rgba(200, 200, 200, 0.7);
+    --hr-bg-color: #cccccc;
+    --site-title-color: #222222;
+    --fieldset-border-color: #cccccc;
+    --input-bg-color: #f8fafb;
+    --input-text-color: #111111;
+    --input-border-color: #999999;
+    --input-placeholder-color: #777777;
+    --input-helper-text-color: #555555;
+    --input-disabled-bg-color: #eeeeee;
+    --input-disabled-text-color: #999999;
+    --input-disabled-border-color: #cccccc;
+    --table-cell-border-color: #cccccc;
+    --table-header-bg-color: #f4f4f4;
+    --table-footer-bg-color: #f4f4f4;
+    --alert-red-border-color: #ff5555;
+    --alert-red-bg-color: #ffdddd;
+    --alert-red-text-color: #660000;
+    --alert-yellow-border-color: #ffdd55;
+    --alert-yellow-bg-color: #fffae6;
+    --alert-yellow-text-color: #665500;
+    --alert-green-border-color: #55ff55;
+    --alert-green-bg-color: #ddffdd;
+    --alert-green-text-color: #006600;
 }
 
 *, *::before, *::after {
@@ -486,18 +484,14 @@ input::placeholder, textarea::placeholder {
     color: var(--input-placeholder-color);
 }
 
+aside input, aside select, aside textarea {
+    background: var(--background-color);
+}
+
 textarea {   
     height: 150px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: block;
-}
-
-form .helper-text {
-    font-size: 14px;
-    color: var(--input-helper-text-color);
-    margin-top: -10px;
-    margin-bottom: 10px;
-    text-align: right !important;
 }
 
 input[type="search"] {
@@ -623,21 +617,6 @@ footer> nav > ul li a {
     font-weight: 500;
 }
 
-/*********************/
-/*** Centered page ***/
-/*********************/
-
-main.centered-page {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-main.centered-page h1,
-main.centered-page p {
-    text-align: center;
-}
-
 /***********************/
 /*** Helper classess ***/
 /***********************/
@@ -647,8 +626,8 @@ main.centered-page p {
     position: absolute;
     left: -999px;
     top: -999px;
-    background: #111;
-    color: #eee;
+    background: var(--background-color);
+    color: var(--text-color);
     padding: 10px 15px;
     z-index: 100;
     text-decoration: none;
@@ -669,6 +648,14 @@ aside.right-sidebar {
     float: right;
     margin-left: 25px;
     margin-right: 0px;
+}
+
+form .helper-text {
+    font-size: 14px;
+    color: var(--input-helper-text-color);
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: right !important;
 }
 
 [role="alert"] {
@@ -733,6 +720,17 @@ aside.right-sidebar {
     }
 }
 
+main.centered-page {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main.centered-page h1,
+main.centered-page p {
+    text-align: center;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
@@ -757,4 +755,15 @@ aside.right-sidebar {
     vertical-align: top;
     margin-right: 9px;
     width: 15px;
+}
+
+#light-toggle {
+    padding: 0px;
+    display: inline-block;
+    background: none;
+}
+
+header details #light-toggle {
+    padding: 10px 15px;
+    width: 100%;
 }

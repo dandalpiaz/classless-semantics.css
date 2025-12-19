@@ -658,6 +658,22 @@ form .helper-text {
     text-align: right !important;
 }
 
+button.cancel-btn {
+    background: #555555;
+}
+
+button.cancel-btn:hover {
+    background: #444444;
+}
+
+button.delete-btn {
+    background: darkred;
+}
+
+button.delete-btn:hover {
+    background: #aa0000;
+}
+
 [role="alert"] {
     border-radius: 5px;
     margin-top: 12px;

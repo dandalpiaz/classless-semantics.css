@@ -14,7 +14,7 @@
 <a href="#main" id="skip-to-main">Skip to main content</a>
 
 <header class="container">
-    <a role="heading" aria-level="1" href="./index.html"><img src="images/vanilla.png" id="example-site-icon" />vanilla-web-templates</a>
+    <a href="./index.html"><img src="images/vanilla.png" id="example-site-icon" />vanilla-web-templates</a>
     <nav aria-label="Main Navigation">
         <ul>
             <li><a href="#templates">Templates</a></li>
@@ -38,14 +38,9 @@
 
 <main id="main" class="container">
 
-    <!--<div role="alert" class="red-alert"><a href="https://github.com/dandalpiaz/vanilla-web-templates/releases">v1.0.0-alpha</a> coming soon</div>-->
+    <div role="alert" class="red-alert">WIP, <a href="https://github.com/dandalpiaz/vanilla-web-templates/releases">v1.0.0-alpha</a> coming soon</div>
 
-    <!--<h1>Hi!</h1>-->
-
-    <!--<figure class="figure-right">
-        <img src="images/vanilla.png" alt="Placeholder image example" />
-        <figcaption>An example image with caption</figcaption>
-    </figure>-->
+    <h1>vanilla-web-templates</h1>
 
     <p>These <code>vanilla-web-templates</code> are a <strong>minimal</strong>, <strong>opinionated</strong> attempt to recreate common functionality needed in websites/apps using 'vanilla' CSS and JavaScript with an emphasis on <em>native HTML elements</em>, <em>semantic structure</em>, and <em>accessibility</em>.</p>
 
@@ -57,231 +52,11 @@
         <li><a href="./templates/login.html"><strong>Login Form</strong></a> – centered form</li>
         <li><a href="./templates/crud.html"><strong>Modal-based Editing</strong></a> – full-width, left-sidebar, modal, table</li>
         <li><a href="./templates/grid.html"><strong>Grid</strong></a> – full-width, right-sidebar, grid</li>
-        <li><a href="./templates/posts.html"><strong>Posts Aggregator</strong></a> – full-width, right-sidebar, listing</li>
     </ul>
 
     <h2 id="usage">Usage</h2>
 
-    [[[tbd - <a href="https://github.com/dandalpiaz/vanilla-web-templates/releases">v1.0.0-alpha</a> coming soon]]]
-    <pre><code>[[[CSS/JS includes here]]]</code></pre>
-
-    <!--<form>
-        <label for="template-search">Filter Templates:</label>
-        <input type="search" name="template-search" id="template-search" placeholder="Enter keyword to filter the items below..." aria-describedby="helper1" />
-        <p id="helper1" class="helper-text">(results update as you type)</p>
-    </form>
-
-    <div class="grid" role="list">
-        <div role="listitem">
-            <a href="./templates/article.html">
-                <img src="https://picsum.photos/id/1/400/225" alt="Placeholder image 1" />
-                <small>Article / Blog Post</small>
-            </a>
-        </div>
-        <div role="listitem">
-            <a href="./templates/contact.html">
-                <img src="https://picsum.photos/id/2/400/225" alt="Placeholder image 2" />
-                <small>Contact Form</small>
-            </a>
-        </div>
-        <div role="listitem">
-            <a href="./templates/login.html">
-                <img src="https://picsum.photos/id/3/400/225" alt="Placeholder image 3" />
-                <small>Login Form</small>
-            </a>
-        </div>
-        <div role="listitem">
-            <a href="./templates/crud.html">
-                <img src="https://picsum.photos/id/4/400/225" alt="Placeholder image 4" />
-                <small>Modal-based Editing</small>
-            </a>
-        </div>
-        <div role="listitem">
-            <a href="./templates/grid.html">
-                <img src="https://picsum.photos/id/5/400/225" alt="Placeholder image 5" />
-                <small>Grid</small>
-            </a>
-        </div>
-        <div role="listitem">
-            <a href="./templates/posts.html">
-                <img src="https://picsum.photos/id/6/400/225" alt="Placeholder image 6" />
-                <small>News Aggregator</small>
-            </a>
-        </div>
-    </div>
-
-    <div id="template-count" aria-live="polite"></div>
-
-    <script>
-        // Filter templates based on input
-        const searchInput = document.getElementById('template-search');
-        const templateItems = document.querySelectorAll('.grid [role="listitem"]');
-        const maxCount = templateItems.length;
-        const templateCount = document.getElementById('template-count');
-        function filterTemplates() {
-            const query = searchInput.value.toLowerCase();
-            let visibleCount = 0;
-            templateItems.forEach(item => {
-                const text = item.textContent.toLowerCase();
-                if (text.includes(query)) {
-                    item.style.display = '';
-                    visibleCount++;
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-            templateCount.innerHTML = `<p>Showing <strong>${visibleCount}</strong> of <strong>${maxCount}</strong> templates.</p>`;
-        }
-        searchInput.addEventListener('input', filterTemplates);
-        filterTemplates();
-    </script>-->
-
-    <!--<h2>Sample Elements</h2>
-
-    <h3>Details/Summary</h3>
-
-    <details>
-        <summary>Expandable section with <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code></summary>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.</p>
-    </details>
-
-    <h3>Table</h3>
-
-    <table>
-        <caption>Example <code>&lt;table&gt;</code></caption>
-        <thead>
-            <tr>
-                <th>Column 1</th>
-                <th>Column 2</th>
-                <th>Column 3</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>TBD</td>
-                <td>TBD</td>
-                <td>TBD</td>
-            </tr>
-            <tr>
-                <td>TBD</td>
-                <td>TBD</td>
-                <td>TBD</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td>TBD</td>
-                <td>TBD</td>
-                <td>TBD</td>
-            </tr>
-        </tfoot>
-    </table>
-
-    <h3>Blockquote</h3>
-
-    <blockquote cite="https://www.huxley.net/bnw/four.html">Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.
-    </blockquote>
-
-    <h3>Code/Pre</h3>
-
-    <p>Example of inline code: <code>console.log("Hello, world!");</code></p>
-
-<pre><code>function helloWorld() {
-    console.log("Hello, world!");
-}
-</code></pre>
-
-    <h3>Modal</h3>
-    
-    <dialog id="sample-modal">
-        <h2>Sample Modal Dialog</h2>
-        <p>This is an example of a modal dialog using the <code>&lt;dialog&gt;</code> element.</p>
-        <button onclick="document.getElementById('sample-modal').close();">Close</button>
-    </dialog>
-
-    <button onclick="document.getElementById('sample-modal').showModal();">Open Modal</button>
-
-    <h3>Buttons</h3>
-
-    <button type="button">Sample Button</button>
-    <button type="button" disabled>Disabled Button</button>
-
-    <h3>Inputs</h3>
-
-    <form>
-        <label for="sample-text">Sample Text Input:</label>
-        <input type="text" id="sample-text" placeholder="Enter text here" disabled>
-
-        <label for="sample-text">Sample Text Input:</label>
-        <input type="text" id="sample-text" placeholder="Enter text here">
-
-        <label for="sample-range">Sample Range Slider:</label>
-        <input type="range" id="sample-range" min="0" max="100" value="50">
-
-        <label for="sample-color">Sample Color Picker:</label>
-        <input type="color" id="sample-color" value="#1e8282">
-
-        <label for="sample-date">Sample Date Picker:</label>
-        <input type="date" id="sample-date">
-
-        <label for="sample-time">Sample Time Picker:</label>
-        <input type="time" id="sample-time">
-
-        <label for="sample-select">Sample Select Dropdown:</label>
-        <select id="sample-select">
-            <option value="" disabled selected>Select an option</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-        </select>
-
-        <label for="sample-search">Sample Search Input:</label>
-        <input type="search" id="sample-search" placeholder="Search...">
-
-        <label for="sample-textarea">Sample Textarea:</label>
-        <textarea id="sample-textarea" placeholder="Enter multiple lines of text here"></textarea>
-
-        <label for="sample-checkbox">Sample Checkbox</label>
-        <input type="checkbox" id="sample-checkbox" checked>
-
-        <fieldset>
-            <legend>Sample Radio Buttons</legend>
-
-            <label for="radio1">Option 1</label>
-            <input type="radio" id="radio1" name="sample-radio" value="option1" checked>
-            
-            <label for="radio2">Option 2</label>
-            <input type="radio" id="radio2" name="sample-radio" value="option2">
-            
-            <label for="radio3">Option 3</label>
-            <input type="radio" id="radio3" name="sample-radio" value="option3">
-        </fieldset>
-    </form>
-
-    <h3>Inline Elements</h3>
-
-    <p>This text is <strong>bold</strong>, this text is <em>italic</em>, and this text is <u>underlined</u>. Here is a <a href="#">sample link</a>.</p>
-
-    <p>This is an example of <mark>marked text</mark>, an <abbr title="HyperText Markup Language">HTML</abbr> abbreviation, and a <cite>citation</cite>.</p>
-
-    <p>This text is <del>deleted</del> and this text is <ins>inserted</ins>. This text is <s>strikethrough</s>.</p>
-    
-    <p>This is an example of <sub>subscript</sub> and this is an example of <sup>superscript</sup>.</p>
-
-    <p>An example keyboard input would look like this: <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.</p>
-
-    <p>He said, <q>This is a sample quotation.</q></p>
-
-    <p>The output was <samp>42</samp> as expected.</p>
-
-    <p>Current time: <time datetime="2024-06-01T12:00">June 1, 2024, 12:00 PM</time></p>
-
-    <address>
-    Example Company<br />
-    123 Fake Street<br />
-    Champaign, IL 61820<br />
-    USA
-    </address>-->
+    <pre><code>[[[TBD]]]</code></pre>
 
 </main>
 
